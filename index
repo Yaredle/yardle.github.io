@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Yared Leul - Personal Portfolio">
+    <title>Yared Leul | Portfolio</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        header nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .hero {
+            background: linear-gradient(to right, #1f4037, #99f2c8);
+            color: #fff;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+        }
+
+        .hero .btn {
+            padding: 10px 20px;
+            background: #fff;
+            color: #333;
+            text-decoration: none;
+            margin-top: 20px;
+            display: inline-block;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        section {
+            padding: 50px 20px;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .about-img img {
+            max-width: 200px;
+            border-radius: 50%;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: auto;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .skill-bar {
+            background: #ddd;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .skill-bar span {
+            display: block;
+            height: 20px;
+            background: #1f4037;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 50px;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+        }
+
+        form button {
+            padding: 10px;
+            background: #1f4037;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background: #99f2c8;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h1>Yared Leul</h1>
+        <p>Software Developer | Creative Problem Solver</p>
+        <a href="#portfolio" class="btn">Explore My Work</a>
+    </section>
+
+    <!-- About Me -->
+    <section id="about">
+        <div class="container">
+            <div class="about-img">
+                <img src="images/profile.jpg" alt="Yared Leul">
+            </div>
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>I’m Yared Leul, a software developer passionate about creating innovative solutions in [your key areas]. With experience in [brief summary of your work], I strive to deliver high-quality, user-focused applications.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio">
+        <h2>My Work</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="images/project1.jpg" alt="Project 1">
+                <h3>Project 1</h3>
+                <p>A brief description of your project.</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="images/project2.jpg" alt="Project 2">
+                <h3>Project 2</h3>
+                <p>A brief description of your project.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill">
+                <h3>Python</h3>
+                <div class="skill-bar">
+                    <span style="width: 90%;"></span>
+                </div>
+            </div>
+            <div class="skill">
+                <h3>JavaScript</h3>
+                <div class="skill-bar">
+                    <span style="width: 80%;"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form action="submit-form.php" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <div class="socials">
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+            <a href="https://github.com" target="_blank">GitHub</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Yared Leul. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
